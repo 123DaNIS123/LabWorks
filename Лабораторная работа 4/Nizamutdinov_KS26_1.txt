@@ -1,0 +1,13 @@
+student(danis, male, excellent).
+student(john, male, good).
+student(margarita, female, excellent).
+student(susie, female, notgood).
+well_doner(X) :- student(X, _, excellent); student(X, _, good). /* Молодец ли X? */
+
+is_there :-
+    well_doner(Y), student(Y, male, _).
+
+run(X) :-
+    well_doner(X);
+    is_there;
+    well_doner(X), student(X, male, _).

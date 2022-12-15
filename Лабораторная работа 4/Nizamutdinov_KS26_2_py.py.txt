@@ -1,0 +1,7 @@
+from math import sin, cos
+
+def count(x, y):
+    z = (sin(x)**2 + cos(y)**2)*2
+    print(z)
+    return z
+count(24, 5)
